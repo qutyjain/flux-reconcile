@@ -17,7 +17,7 @@ spec:
   chart:
     spec:
       chart: nginx
-      version: "9.3.2"  # Use a specific version of the chart
+      version: "0.1.0"  # Use a specific version of the chart
       sourceRef:
         kind: HelmRepository
         name: mychart-component  # This must match the metadata.name in the HelmRepository resource
