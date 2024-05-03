@@ -4,4 +4,4 @@ metadata:
   name: flux
   namespace: flux-system
 data:
-  name: qutyjain
+  name: quty
