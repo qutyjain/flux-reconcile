@@ -12,6 +12,8 @@ kind: HelmRelease
 metadata:
   name: my-nginx
   namespace: flux-system
+  annotations:
+    whatChanged: chart
 spec:
   interval: 1m
   chart:
