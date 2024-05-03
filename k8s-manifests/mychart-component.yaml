@@ -13,7 +13,7 @@ metadata:
   name: my-nginx
   namespace: flux-system
   annotations:
-    whatChanged: chart
+    whatChanged: chart1
 spec:
   interval: 1h
   chart:
