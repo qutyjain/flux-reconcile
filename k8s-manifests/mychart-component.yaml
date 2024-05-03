@@ -16,7 +16,7 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: nginx
+      chart: mychart
       version: "0.1.0"  # Use a specific version of the chart
       sourceRef:
         kind: HelmRepository
