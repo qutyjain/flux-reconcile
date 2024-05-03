@@ -1,0 +1,28 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: mychart-component
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: http://192.168.0.164:8000/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: my-nginx
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: nginx
+      version: "9.3.2"  # Use a specific version of the chart
+      sourceRef:
+        kind: HelmRepository
+        name: mychart-component  # This must match the metadata.name in the HelmRepository resource
+        namespace: flux-system
+  values:
+    service:
+      type: LoadBalancer
+    replicaCount: 2
