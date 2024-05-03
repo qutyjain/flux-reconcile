@@ -15,7 +15,7 @@ metadata:
   annotations:
     whatChanged: chart
 spec:
-  interval: 1m
+  interval: 1h
   chart:
     spec:
       chart: mychart
